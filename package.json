@@ -4,8 +4,13 @@
   "description": "Juego tres en linea Prueba Técnica Nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Guillermo Hernández",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  }
 }
