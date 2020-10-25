@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node ./src/server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillermounivalle/tres_en_linea.git"
   },
   "author": "Guillermo Hernández",
   "license": "ISC",
@@ -21,9 +26,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "browser": "> 0.2%, not dead, not ie 11"
-
 }

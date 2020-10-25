@@ -1,0 +1,6 @@
+//info configuration server
+
+
+module.exports = {
+    port: process.env.PORT || 3000,
+}
