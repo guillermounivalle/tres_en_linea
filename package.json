@@ -1,0 +1,11 @@
+{
+  "name": "tres_en_linea",
+  "version": "1.0.0",
+  "description": "Juego tres en linea Prueba Técnica Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillermo Hernández",
+  "license": "ISC"
+}
