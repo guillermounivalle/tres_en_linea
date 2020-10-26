@@ -4,12 +4,13 @@ const config = require('../../config');
 const createError = require('http-errors');
 const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
+const gamesRouter = require('./routes/games');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 const webpack = require('webpack');
-const WebpackDevMiddleware = require('webpack-dev-middleware');
-const webpackConfig = require('../../webpack.config');
+//const WebpackDevMiddleware = require('webpack-dev-middleware');
+//const webpackConfig = require('../../webpack.config');
 
 
 
@@ -21,12 +22,13 @@ app.use(express.json());
 app.set('port', process.env.PORT || port);
 
 //Middlewares
-app.use(WebpackDevMiddleware(webpack(webpackConfig)));
+//app.use(WebpackDevMiddleware(webpack(webpackConfig)));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 //Routes
-app.use('/', indexRouter)
+//app.use('/', indexRouter);
+app.use('/games', gamesRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 
 
