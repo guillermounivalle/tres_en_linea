@@ -7,6 +7,11 @@ const indexRouter = require('./routes/index');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
+const webpack = require('webpack');
+const WebpackDevMiddleware = require('webpack-dev-middleware');
+const webpackConfig = require('../../webpack.config');
+
+
 
 const port = config.port;
 const app = express();
@@ -16,6 +21,7 @@ app.use(express.json());
 app.set('port', process.env.PORT || port);
 
 //Middlewares
+app.use(WebpackDevMiddleware(webpack(webpackConfig)));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
@@ -24,9 +30,7 @@ app.use('/', indexRouter)
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use(function(req, res, next) {
-    next(createError(404));
-});
+
 
 
 //Message info server is running ok
