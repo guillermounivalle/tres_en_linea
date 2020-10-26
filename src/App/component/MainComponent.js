@@ -22,8 +22,7 @@ class Main extends Component {
 
         return(
             <div>
-                <Header/>
-                <Route path="/home" component={HomePage}/>
+                <h1>Hola Mundo</h1>
             </div>
         )
     }
