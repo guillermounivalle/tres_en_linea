@@ -19,7 +19,9 @@ class Home extends Component {
                     </div>
                     <div class="col-sm"></div>                                       
                 </div>
-                <div></div>
+                <div className='row'>
+
+                </div>
             </div>
         );
     }
