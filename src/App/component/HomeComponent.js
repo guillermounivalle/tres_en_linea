@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ListGames from './ListGames'
 
 
 
@@ -20,7 +21,7 @@ class Home extends Component {
                     <div class="col-sm"></div>                                       
                 </div>
                 <div className='row'>
-
+                    <ListGames/>
                 </div>
             </div>
         );
