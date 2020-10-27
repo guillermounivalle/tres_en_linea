@@ -1,33 +1,51 @@
 import React, {Component} from 'react';
 import Home from  './HomeComponent';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Switch } from 'react-router-dom';
+import { actions } from 'react-redux-form';
+import { fetchGames } from '../redux/ActionsCreators';
+
 
 //Connect with redux
-
-
+import { connect } from 'react-redux';
 
 // Connect component with react store
+const mapStateToProps = state => {
+	return {
+		games: state.games,
+	}	
+}
+
+const mapDispatchToProps = (dispatch) => ({
+	fetchGames: () => {dispatch(fetchGames())}
+});
 
 class Main extends Component {
 	constructor(props){
 		super(props);
-    }
+    };
+
+    componentDidMount(){
+		this.props.fetchGames();
+	};
+
 
     render(){
+
+
         const HomePage = () => {
             return(
-                <Home/>
+                <Home dish={this.props.games.games.filter((game) => dish.featured)[0]}
+                dishesLoading={this.props.games.isLoading}
+                dishErrMess={this.props.games.errMess}/>
             );
-        }
+        };
 
         return(
-            <div >
-                <Home/>
-                
-            </div>
-        )
-    }
+            <Switch>
+                <Route path="/home" component={HomePage}/>
+            </Switch>            
+        );
+    };
+};
 
-}//<Route path="/home" component={HomePage}/>
-
-export default withRouter((Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

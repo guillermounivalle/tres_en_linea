@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev-server": " node ./src/server/app.js",
-    "dev-client": "webpack-dev-server -d --open",
+    "dev-client": "webpack-serve ./webpack.config.js  ",
     "start": "nodemon --exec babel-node src/server/app.js"
   },
   "repository": {
@@ -30,7 +30,8 @@
     "webpack-cli": "^4.1.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
-    "webpack-livereload-plugin": "^2.3.0"
+    "webpack-livereload-plugin": "^2.3.0",
+    "webpack-serve": "^3.2.0"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
@@ -45,9 +46,13 @@
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-redux": "^7.2.1",
+    "react-redux": "^7.2.2",
+    "react-redux-form": "^1.16.14",
     "react-router-dom": "^5.2.0",
-    "reactstrap": "^8.6.0"
+    "reactstrap": "^8.6.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "browser": "> 0.2%, not dead, not ie 11"
 }

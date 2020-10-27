@@ -3,11 +3,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
+const { join } = require('path');
+const outputPath = join(process.cwd(), '/dist');
+
 module.exports ={
     entry: './src/App/index.js',
     output: {
         filename: 'bundle.[hash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: outputPath
     },
     mode: 'production',
     module:{
@@ -26,6 +29,6 @@ module.exports ={
     plugins:[new CleanWebpackPlugin(), new HtmlWebpackPlugin({
         template: './src/public/index.html'
     })]
-  
+      
 }
 
