@@ -1,11 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Games } from './games';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-            game: "game"
+            games: Games
         }),
         applyMiddleware(thunk, logger)
     );
