@@ -4,3 +4,12 @@
     margin: 1rem;
     color: blue;
 }
+
+.title {
+    background: #9575CD ;
+}
+
+.row-header{
+    background: #9575CD ;
+    padding: 20px 0px 0px 0px;
+}

@@ -21,12 +21,13 @@ class Main extends Component {
         }
 
         return(
-            <div>
-                <h1>Hola Mundo</h1>
+            <div >
+                <Home/>
+                
             </div>
         )
     }
 
-}
+}//<Route path="/home" component={HomePage}/>
 
 export default withRouter((Main));
