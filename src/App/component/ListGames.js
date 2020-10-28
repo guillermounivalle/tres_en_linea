@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import { Media } from 'reactstrap';
+import { ReactReduxContext } from 'react-redux';
 
 
 
@@ -56,19 +57,29 @@ class ListGames extends Component{
     }
 
     stateGame(game){
-        switch (game.stateGame) {
-            case 1:
-                return <p>Estado del juego:  {game.player1} ganador</p>
-            case 2:
-                return <p>Estado del juego:  {game.player2} ganador</p>
-            case 3:
-                return <p>Estado del juego:  Empate: No hubo ganadores</p>
-            case 4:
-                return <p>Estado del juego:  Sin terminar</p>
-            default:
-                break;
+        var stateGame = game.stateGame;
+        if(stateGame != null){
+            switch (game.stateGame) {
+                case 1:
+                    return <p>Estado del juego:  {game.player1} ganador</p>
+                case 2:
+                    return <p>Estado del juego:  {game.player2} ganador</p>
+                case 3:
+                    return <p>Estado del juego:  Empate: No hubo ganadores</p>
+                case 4:
+                    return <p>Estado del juego:  Sin terminar</p>
+                default:
+                    break;
+            }
         }
-    }
+        else{
+            console.log("Error stateGame =====>" + stateGame);
+            return(
+                <p></p>
+            );
+        };
+        
+    };
 
     render() {
         const games = this.state.games.map((game) => {
