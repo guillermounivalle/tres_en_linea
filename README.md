@@ -31,4 +31,4 @@ Tecnologías Usadas:
 
 Link twitter:
 
-- https://twitter.com/guiller2783?s=03
+- https://twitter.com/guiller2783/status/1321448587415441408?s=19
