@@ -3,7 +3,7 @@ TRES EN RAYA
 
 Ejecución del proyecto
 
-1. Hacer git clone del proyecto. Luego ubicarse en el proyecto y ejecutar "git pull origin develop"
+1. En el cmd de windows o la consola linux o Mac ubicarse en el directorio donde desea almacenar el proyecto. Luego hacer git clone del proyecto usando el        siguiente comando: "git clone --branch develop https://github.com/guillermounivalle/tres_en_linea.git"
 2. En el cmd de windows o la consola linux o Mac ubicarse el directorio del proyecto
    y ejecutar el comando "npm install"  para instalar los paquetes y librerias necesarias.
 3. Abrir la conexión de la base de datos MongoDB
